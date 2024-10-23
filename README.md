@@ -129,6 +129,7 @@ If you find our work helpful, please consider citing our paper.
 @inproceedings{songsurfpro,
   title={SurfPro: Functional Protein Design Based on Continuous Surface},
   author={Song, Zhenqiao and Huang, Tinglin and Li, Lei and Jin, Wengong},
-  booktitle={Forty-first International Conference on Machine Learning}
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024}
 }
 ```
