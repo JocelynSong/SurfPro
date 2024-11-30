@@ -47,7 +47,7 @@ device = torch.device("cuda")
 
 def read_atom_dict():
     lines = open(
-        "/mnt/data4/zhenqiaosong/protein_design/data/CATH/CATH_4_2/remove_unk/remove_repeat_id/extract_features/length_filtering/dict.txt",
+        "dict.txt",
         "r", encoding="utf-8").readlines()
     atom2index = dict()
     index2atom = []
