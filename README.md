@@ -23,7 +23,7 @@ bash setup.sh
 
 We provide all surface data for cath 4.2, binder design task and enzyme design task at [SurfPro data](https://drive.google.com/drive/folders/13BdM1j_7Q4iGthsifUxc11yoq03BmdKL?usp=drive_link)
 
-```angular2html
+```ruby
 mkdir data 
 cd data 
 mkdir cath42 && cd cath42
@@ -52,7 +52,7 @@ The vert files are put in fasta_file_path/msms directory by default.
 <h2>Inverse Folding Task Training</h2>
 First Download the corresponding data and decompress it:
 
-```angular2html
+```ruby
 mkdir binder_design && cd binder_design
 wget https://drive.google.com/file/d/1_IUTRpQtQpoPzxUDD7cTzUn150hViN5h/view?usp=drive_link
 tar -xvzf octree_aa_surf_5k_sorted.tar.gz
