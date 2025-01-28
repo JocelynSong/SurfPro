@@ -42,9 +42,11 @@ If you want to generate surface from your own PDB files, please use the file pre
 
 You need to first apply MSMS tool to generate the corresponding vert files.
 Then you need to provide the corresponding fasta file and vert files to prepare corresponding surfaces. To run the code:
+
 ```ruby
 python preprocess/prepare_surface.py --data_path fasta_file_path --split train --output_path output_data_path
 ```
+
 The vert files are put in fasta_file_path/msms directory by default.
 
 <h2>Inverse Folding Task Training</h2>
@@ -58,43 +60,49 @@ tar -xvzf octree_aa_surf_5k_sorted.tar.gz
 
 Then training the model:
 
-```angular2html
+```ruby
 bash train_suface_inverse_folding.sh
 ```
 
 <h2>Binder Design Training</h2>
 First Download the corresponding data:
-```angular2html
+
+```ruby
 mkdir binder_design && cd binder_design
 wget https://drive.google.com/drive/folders/1S7fg-XWBSy6-Pq7bSG_IrlLgLi3ESoX3?usp=drive_link
 ```
 
 Then decompress the target-binder data which are necessary for pAE_interaction evaluation.
-```angular2html
+
+```ruby
 cd binder_design/Binder_Design_Data
 tar -xvzf binder.pkl.tar.gz
 ```
 
 Then training the model. Suppose the model ckpt from inverse folding task is at cath_model_path/checkpoint_best.pt. The training script is shown below:
-```angular2html
+
+```ruby
 bash binder_design_finetune.sh
 ```
 
 <h2>Enzyme Design Training</h2>
 First Download the corresponding data:
-```angular2html
+
+```ruby
 mkdir enzyme_design && cd enzyme_design
 wget https://drive.google.com/drive/folders/13EpZ1u7l28W0aR2WfXhIBooK5LZpXqTU?usp=drive_link
 ```
 
 Then training the model. Suppose the model ckpt from inverse folding task is at cath_model_path/checkpoint_best.pt. The training script is shown below:
-```angular2html
+
+```ruby
 bash binder_design_finetune.sh
 ```
 
 <h2>Inference</h2>
 To generate protein sequences for CATH 4.2, design binders or design enzymes:
-```angular2html
+
+```ruby
 bash generation_cath42.sh
 bash generate_binder.sh
 bash generate_enzyme.sh
