@@ -61,7 +61,7 @@ tar -xvzf octree_aa_surf_5k_sorted.tar.gz
 Then training the model:
 
 ```ruby
-bash train_suface_inverse_folding.sh
+bash train_surface_inverse_folding.sh
 ```
 
 <h2>Binder Design Training</h2>
