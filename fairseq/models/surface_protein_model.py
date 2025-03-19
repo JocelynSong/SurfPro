@@ -549,7 +549,7 @@ class SurfaceProteinModel(TransformerModel):
         """
         bs, length = prev_output_tokens.size(0), prev_output_tokens.size(1)
         surf_aa_embs = torch.index_select(self.surf_aa_features, 0, aa_features.reshape(-1)).reshape(bs, -1, 2)
-        surf_aa_embs = torch.zeros(surf_aa_embs.size()[0], surf_aa_embs.size()[1], surf_aa_embs.size()[2]).to(device)
+        # surf_aa_embs = torch.zeros(surf_aa_embs.size()[0], surf_aa_embs.size()[1], surf_aa_embs.size()[2]).to(device)
         coor_features = coor_features.view(coor_features.size(0), -1, 3)
 
         # sequence representations
