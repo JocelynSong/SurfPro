@@ -19,6 +19,15 @@ conda install pytorch=1.10.2 cudatoolkit=11.3 -c pytorch -y
 bash setup.sh 
 ```
 
+To install SRU++, run
+
+```ruby
+git clone https://github.com/asappresearch/sru
+cd sru 
+git checkout 3.0.0-dev 
+pip install . 
+```
+
 <h2>Download Data</h2>
 
 We provide all surface data for cath 4.2, binder design task and enzyme design task at [SurfPro data](https://drive.google.com/drive/folders/13BdM1j_7Q4iGthsifUxc11yoq03BmdKL?usp=drive_link)
@@ -33,6 +42,12 @@ wget https://drive.google.com/drive/folders/1S7fg-XWBSy6-Pq7bSG_IrlLgLi3ESoX3?us
 cd .. && mkdir enzyme_design && cd enzyme_design
 wget https://drive.google.com/drive/folders/13EpZ1u7l28W0aR2WfXhIBooK5LZpXqTU?usp=drive_link
 ```
+
+<h2>Download Model</h2>
+
+We provide the model weigths trained on CATH4.2 at [CATH4.2 model weights](https://drive.google.com/file/d/1xl_3xUrzjZCYcl5C5eUKjJd5VoRG28NQ/view?usp=drive_link)
+
+We also provide our pretrained model weights on the whole PDB surfaces (SurfPro-Pretrain) at [pretranied model weights](https://drive.google.com/file/d/1F2M4yMVPlkKY5KXpp6GwJvopl3Qq8gRo/view?usp=drive_link)
 
 <h2>Prepare Surface for your own model</h2>
 
